@@ -4340,44 +4340,6 @@ function UILibrary.Section:Toggle(sett, callback)
     return meta
 end
 
-function UILibrary.Section:Label(sett)
-    local functions = {}
-    functions.__index = functions
-
-    local cheatBase = generateCheatBase("Label", {
-        Title = sett.Text or "Label",
-        Description = sett.Description or "",
-    })
-    cheatBase.Parent = self.Section.Border.Content
-    cheatBase.LayoutOrder = getLayoutOrder(self.Section.Border.Content)
-
-    local element = cheatBase.Content.ElementContent
-    -- Remove the interactive elements (like buttons or textboxes)
-    if element:FindFirstChild("Textbox") then
-        element.Textbox:Destroy()
-    end
-    if element:FindFirstChild("Button") then
-        element.Button:Destroy()
-    end
-
-    -- Just use a text label
-    local label = Instance.new("TextLabel")
-    label.BackgroundTransparency = 1
-    label.Size = UDim2.new(1, 0, 1, 0)
-    label.Position = UDim2.new(0, 0, 0, 0)
-    label.Font = Enum.Font.SourceSans
-    label.TextSize = 14
-    label.TextColor3 = Color3.new(1, 1, 1)
-    label.TextXAlignment = Enum.TextXAlignment.Left
-    label.Text = sett.Text or "Label"
-    label.Parent = element
-
-    return setmetatable({}, functions)
-end
-
-
-
-
 function UILibrary.Section:Textbox(sett, callback)
     local functions = {}
     functions.__index = functions
