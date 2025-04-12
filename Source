@@ -1365,16 +1365,16 @@ local function getObjGen()
             Gui.UIPadding_8.PaddingRight = UDim.new(0, 4)
             Gui.UIPadding_8.PaddingTop = UDim.new(0, 16)
 
-            Gui.Logo.Name = "Logo"
-            Gui.Logo.Parent = Gui.Cheats_2
-            Gui.Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            Gui.Logo.BackgroundTransparency = 1.000
-            Gui.Logo.LayoutOrder = -5
-            Gui.Logo.Size = UDim2.new(0.051, 0, 0.1, 0,)
-            Gui.Logo.ZIndex = 122
-            Gui.Logo.Image = "https://create.roblox.com/store/asset/114934448880927/Shark"
-            Gui.Logo.ImageColor3 = Color3.fromRGB(255, 255, 255)
-            Gui.Logo.ScaleType = Enum.ScaleType.Fit
+           Gui.Logo.Name = "Logo"
+Gui.Logo.Parent = Gui.Cheats_2
+Gui.Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Logo.BackgroundTransparency = 1.000
+Gui.Logo.LayoutOrder = -5
+Gui.Logo.Size = UDim2.new(0.051, 0, 0.1, 0) -- Adjust size if needed
+Gui.Logo.ZIndex = 122
+Gui.Logo.Image = "rbxassetid://114934448880927" -- Correct format with asset ID
+Gui.Logo.ImageColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Logo.ScaleType = Enum.ScaleType.Fit
 
             Gui.UIGradient_5.Color =
                 ColorSequence.new {
